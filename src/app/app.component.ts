@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { UserComponent } from './components/user/user.component';
 
 @Component({
   selector: 'app-root', /* To call the component */
   standalone: true, /* Components that don't need a module */
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, UserComponent],
   templateUrl: './app.component.html', /* Point towards .html file */
   styleUrl: './app.component.css', /* Point towards .css file */
 })
@@ -18,8 +19,5 @@ export class AppComponent {
   */
 
   city = 'Medellin'; /* Variable used to show Data Binding */
-
-
-
 
 }

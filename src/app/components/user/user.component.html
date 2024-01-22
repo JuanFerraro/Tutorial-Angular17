@@ -1,0 +1,19 @@
+<div class="container">
+
+  @if (userExist) {
+    <h3>Welcome User: {{ username }}</h3>
+
+    <p>This User can use these programming languages:</p>
+    <ul>
+      @for (language of programmingLanguages; track $index) {
+        <li>{{ language }}</li>
+      }
+    </ul>
+
+    <p>This comes from User Component</p>
+
+  } @else {
+    <h3>There is not users yet... :c</h3>
+  }
+
+</div>
