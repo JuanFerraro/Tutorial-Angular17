@@ -5,6 +5,28 @@
   border-radius: 8px;
 }
 
+.isEditable {
+  border: 1px solid;
+  border-color: black;
+  border-radius: 4px;
+  padding: 6px;
+  margin: 4px 4px 8px 0px;
+}
+
+button {
+  background-color: silver;
+  padding: 6px;
+  border-style: dashed;
+  border-width: 1px;
+  border-radius: 4px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: white;
+}
+
 h3 {
   margin: 0;
 }

@@ -10,6 +10,14 @@
       }
     </ul>
 
+    <!-- Property Binding [] -->
+    <p [contentEditable]="isEditable" class="isEditable" >
+      {{ pText }}
+    </p>
+
+    <!-- Event Handling () -->
+    <button (dblclick)="editable()" >🙈 Doble click para mover al mono (o editarlo) 🙈</button>
+
     <p>This comes from User Component</p>
 
   } @else {
