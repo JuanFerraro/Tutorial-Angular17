@@ -18,6 +18,6 @@ export class AppComponent {
       .html
   */
 
-  city = 'Medellin'; /* Variable used to show Data Binding */
-
+  user_city = 'Medellin'; /* Variable used to show Data Binding */
+  user_occupation = 'Student'
 }

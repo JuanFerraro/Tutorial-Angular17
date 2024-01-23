@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -13,7 +13,10 @@ export class UserComponent {
   userExist: boolean = true;
   programmingLanguages = ['Python', 'Java', 'TypeScript', 'JavaScript'];
   isEditable: boolean = false; /* Used for Property Binding: Component -> Template */
-  pText: string = '🙉🙉🙉🙉🙉🙉'
+  pText: string = '🙉🙉🙉🙉🙉🙉' /* Used for Event Handling */
+
+  /* @Input means that this componentc expect to recieve this variable from de Parent Component */
+  @Input() city: string = "";
 
   editable() {
     if (this.isEditable == true){

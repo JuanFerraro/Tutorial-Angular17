@@ -1,9 +1,21 @@
-<p>These are my first words in Angular 17!</p>
+<section class="mainSection">
+  <h1>Parent/Main Component!</h1>
+  <p>These are my first words in Angular 17!</p>
 
-<!-- Property Binding: -->
-<h3>Hello I'm from {{ city }} and {{ 2000000 + 700000 }} people live here!</h3>
+  <!-- Interpolation: -->
+  <p>Hello I'm from {{ user_city }} and {{ 2000000 + 700000 }} people live here!</p>
 
-<!-- Rendering another component -->
-<app-user></app-user>
+  <!-- Rendering another component -->
+  <section>
+
+    <!-- Sending user_city using Property Binding to UserComponent[city] -->
+    <app-user [city]="user_city"></app-user>
+
+  </section>
+
+  <hr>
+  <p>All in light gray comes from Parent/Main Component!</p>
+
+</section>
 
 <router-outlet></router-outlet>

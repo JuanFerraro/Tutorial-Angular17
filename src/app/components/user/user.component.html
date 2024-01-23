@@ -1,27 +1,34 @@
 <div class="container">
 
-  @if (userExist) {
-    <h3>Welcome User: {{ username }}</h3>
+  <h2>User Component!</h2>
 
-    <p>This User can use these programming languages:</p>
-    <ul>
-      @for (language of programmingLanguages; track $index) {
-        <li>{{ language }}</li>
-      }
-    </ul>
+  <section>
 
-    <!-- Property Binding [] -->
-    <p [contentEditable]="isEditable" class="isEditable" >
-      {{ pText }}
-    </p>
+    @if (userExist) {
+      <h3>Welcome User: {{ username }}</h3>
+      <p> {{ username }} live in {{city }}</p>
+      <p>This user can use these programming languages:</p>
+      <ul>
+        @for (language of programmingLanguages; track $index) {
+          <li>{{ language }}</li>
+        }
+      </ul>
 
-    <!-- Event Handling () -->
-    <button (dblclick)="editable()" >🙈 Doble click para mover al mono (o editarlo) 🙈</button>
+      <!-- Property Binding [] -->
+      <p [contentEditable]="isEditable" class="isEditable" >
+        {{ pText }}
+      </p>
 
-    <p>This comes from User Component</p>
+      <!-- Event Handling () -->
+      <button (dblclick)="editable()" >🙈 Double click here to move the monkey (or edit it) 🙈</button>
 
-  } @else {
-    <h3>There is not users yet... :c</h3>
-  }
+    } @else {
+      <h3>There is not users yet... :c</h3>
+    }
+
+  </section>
+
+  <hr>
+  <p>This card comes from User Component</p>
 
 </div>
