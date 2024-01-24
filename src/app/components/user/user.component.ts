@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -18,15 +18,22 @@ export class UserComponent {
   /* @Input means that this componentc expect to recieve this variable from de Parent Component */
   @Input() city: string = "";
 
+  /* @Ouput means that a event is going to the Parent Component */
+  @Output() incrementCountEvent = new EventEmitter<number>();
+
   editable() {
     if (this.isEditable == true){
       this.isEditable = false
-      this.pText = '🙉🙉🙉🙉🙉🙉'
+      this.pText = '🙉🙉🙉🙉🙉🙉🙉🙉🙉🙉🙉🙉'
     } else {
       this.isEditable = true
-      this.pText = '🙊🙊🙊🙊🙊🙊'
+      this.pText = '🙊🙊🙊🙊🙊🙊🙊🙊🙊🙊🙊🙊'
     }
     console.log(this.isEditable)
+  }
+
+  increaseCount() {
+    this.incrementCountEvent.emit(0);
   }
 
 }

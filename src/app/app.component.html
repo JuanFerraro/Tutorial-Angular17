@@ -4,16 +4,18 @@
 
   <!-- Interpolation: -->
   <p>Hello I'm from {{ user_city }} and {{ 2000000 + 700000 }} people live here!</p>
+  <p>👋 count from User Component: {{ count }}</p>
 
   <!-- Rendering another component -->
   <section>
 
-    <!-- Sending user_city using Property Binding to UserComponent[city] -->
-    <app-user [city]="user_city"></app-user>
+    <!-- Sending user_city using Property Binding to UserComponent[city] @Input -->
+    <!-- Receiving incrementCountEvent as an event from UserComponent @Output -->
+    <app-user [city]="user_city" (incrementCountEvent)="increaseCount($event)" ></app-user>
 
   </section>
 
-  <hr>
+  <br>
   <p>All in light gray comes from Parent/Main Component!</p>
 
 </section>

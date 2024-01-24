@@ -20,6 +20,7 @@
 button {
   background-color: silver;
   padding: 6px;
+  margin-top: 4px;
   border-style: dashed;
   border-width: 1px;
   border-radius: 4px;

@@ -18,6 +18,12 @@ export class AppComponent {
       .html
   */
 
-  user_city = 'Medellin'; /* Variable used to show Data Binding */
-  user_occupation = 'Student'
+  user_city: string = 'Medellin'; /* Variable used to show Data Binding */
+  user_occupation: string = 'Student'
+  count: number = 0
+
+  increaseCount(num: number){
+    this.count++;
+  }
+
 }
