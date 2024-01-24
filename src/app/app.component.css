@@ -23,3 +23,21 @@ p {
   row-gap: 8px;
   align-items: center;
 }
+
+.componentSection {
+  display: flex;
+  column-gap: 12px;
+}
+
+.commentComponent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.commentComponent p:hover {
+  color: black;
+}

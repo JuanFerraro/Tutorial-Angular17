@@ -1,0 +1,20 @@
+.commentContainer {
+  max-width: 300px;
+  color: white;
+  background-color: #555555;
+  padding: 4px;
+  border-radius: 8px;
+  display: grid;
+  justify-items: center;
+}
+
+.comment {
+  background-color: #1a1a1a;
+  padding: 6px;
+  border-radius: 20px 4px 20px 4px;
+  margin: 4px 2px 8px 2px;
+}
+
+h2 {
+  margin-top: 0;
+}

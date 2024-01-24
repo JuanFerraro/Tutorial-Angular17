@@ -7,11 +7,22 @@
   <p>👋 count from User Component: {{ count }}</p>
 
   <!-- Rendering another component -->
-  <section>
+  <section class="componentSection">
 
     <!-- Sending user_city using Property Binding to UserComponent[city] @Input -->
     <!-- Receiving incrementCountEvent as an event from UserComponent @Output -->
     <app-user [city]="user_city" (incrementCountEvent)="increaseCount($event)" ></app-user>
+    @defer (on interaction) {
+      <app-comment></app-comment>
+    } @placeholder {
+      <div class="commentComponent">
+        <p>Click here to see the Comments Component</p>
+      </div>
+    } @loading (minimum 4s) {
+      <div class="commentComponent">
+        <img src="../assets/loading.gif" alt="loading" width="80px" height="80px">
+      </div>
+    }
 
   </section>
 
