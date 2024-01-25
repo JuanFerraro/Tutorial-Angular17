@@ -3,11 +3,18 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { UserComponent } from './components/user//user.component';
 import { CommentComponent } from './components/comment/comment.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @Component({
   selector: 'app-root', /* To call the component */
   standalone: true, /* Components that don't need a module */
-  imports: [CommonModule, RouterOutlet, UserComponent, CommentComponent, NgOptimizedImage],
+  imports: [CommonModule,
+            RouterOutlet,
+            UserComponent,
+            CommentComponent,
+            NgOptimizedImage,
+            NavbarComponent,
+           ],
   templateUrl: './app.component.html', /* Point towards .html file */
   styleUrl: './app.component.css', /* Point towards .css file */
 })
