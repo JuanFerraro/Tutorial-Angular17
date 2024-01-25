@@ -32,6 +32,7 @@ p {
 .commentComponent {
   display: flex;
   justify-content: center;
+  justify-items: center;
   align-items: center;
   width: 300px;
   font-style: italic;
