@@ -14,4 +14,10 @@ export class ContactComponent {
   email: string = '';
   message: string = '';
 
+  sendForm() {
+    console.log(this.name)
+    console.log(this.email)
+    console.log(this.message)
+  }
+
 }

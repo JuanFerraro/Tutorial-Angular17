@@ -36,6 +36,7 @@ p {
   width: 300px;
   font-style: italic;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .commentComponent p:hover {

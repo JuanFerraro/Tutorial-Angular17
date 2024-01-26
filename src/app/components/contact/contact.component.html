@@ -13,7 +13,7 @@
     <label for="message">Message:</label>
     <textarea [(ngModel)]="message" class="message" id="message" name="message" placeholder="Your message" rows="4" required></textarea>
 
-    <button type="submit">Submit</button>
+    <button (click)="sendForm()" type="submit">Submit</button>
   </form>
 
 </section>
