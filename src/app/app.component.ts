@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { UserComponent } from './components/user//user.component';
 import { CommentComponent } from './components/comment/comment.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 
 @Component({
   selector: 'app-root', /* To call the component */
@@ -13,7 +12,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
             UserComponent,
             CommentComponent,
             NgOptimizedImage,
-            NavbarComponent,
+            RouterLink,
            ],
   templateUrl: './app.component.html', /* Point towards .html file */
   styleUrl: './app.component.css', /* Point towards .css file */
