@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-comment',
@@ -13,13 +13,11 @@ export class CommentComponent {
   comments = ['I hope I can learn how to use Angular', 'How can I add more comments?'];
 
   commentForm = new FormGroup({
-    comment: new FormControl ('')
+    comment: new FormControl ('', Validators.required)
   });
 
   addComment(){
-    if (this.commentForm.value.comment != ''){
-      this.comments.push(this.commentForm.value?.comment ?? '')
-    }
+    this.comments.push(this.commentForm.value?.comment ?? '')
   }
 
 }

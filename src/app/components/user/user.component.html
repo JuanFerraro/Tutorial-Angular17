@@ -32,6 +32,28 @@
   </section>
 
   <hr>
+  <p class="friends" (click)="seeFriends()" >Meet my friends!</p>
+  @if (friends) {
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (friend of friendsList; track friend.id) {
+          <tr>
+            <td> {{ friend.name }} </td>
+            <td> {{ friend.username }} </td>
+            <td> {{ friend.email }} </td>
+          </tr>
+        }
+      </tbody>
+
+    </table>
+  }
   <p>This card comes from User Component</p>
 
 </div>

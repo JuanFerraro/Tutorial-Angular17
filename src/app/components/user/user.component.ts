@@ -1,4 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
+import { ApiFriends } from '../../models/user.model';
+import { ExampleService } from '../../services/example.service';
 
 @Component({
   selector: 'app-user',
@@ -14,6 +16,11 @@ export class UserComponent {
   programmingLanguages = ['Python', 'Java', 'TypeScript', 'JavaScript'];
   isEditable: boolean = false; /* Used for Property Binding: Component -> Template */
   pText: string = '🙉🙉🙉🙉🙉🙉🙉🙉🙉🙉🙉🙉' /* Used for Event Handling */
+
+  /* Inject Services */
+  _exampleService = inject(ExampleService);
+  friendsList: ApiFriends[] = [];
+  friends: boolean = false;
 
   /* @Input means that this componentc expect to recieve this variable from de Parent Component */
   @Input() city: string = "";
@@ -34,6 +41,14 @@ export class UserComponent {
 
   increaseCount() {
     this.incrementCountEvent.emit(0);
+  }
+
+  seeFriends() {
+    this._exampleService.getFriends().subscribe((data: ApiFriends[]) =>{
+      this.friendsList = data;
+    });
+    this.friends = true;
+    console.log(this.friendsList)
   }
 
 }

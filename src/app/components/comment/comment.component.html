@@ -9,7 +9,7 @@
   <form [formGroup]="commentForm" (ngSubmit)="addComment()" >
 
     <input type="text" placeholder="New Comment" formControlName="comment">
-    <button type="submit">Add</button>
+    <button type="submit" [disabled]="!commentForm.valid">Add</button>
 
   </form>
 

@@ -9,7 +9,7 @@
   max-width: 500px;
   margin: 12px auto;
   background-color: #cbcbcb;
-  padding: 20px;
+  padding: 12px 16px 12px 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -46,6 +46,11 @@ button {
 
 button:hover {
   background-color: #616161;
+}
+
+p {
+  margin-top: 12px;
+  text-align: center;
 }
 
 .message {

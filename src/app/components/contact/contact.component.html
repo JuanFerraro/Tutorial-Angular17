@@ -3,17 +3,18 @@
 
   <h1>Contact Me</h1>
 
-  <form>
+  <form [formGroup]="contactForm" (ngSubmit)="sendForm()">
     <label for="name">Name:</label>
-    <input [(ngModel)]="name" type="text" id="name" name="name" placeholder="Your name" required>
+    <input formControlName="name" type="text" id="name" name="name" placeholder="Your name" required>
 
     <label for="email">Email:</label>
-    <input [(ngModel)]="email" type="email" id="email" name="email" placeholder="Your email" required>
+    <input formControlName="email" type="email" id="email" name="email" placeholder="Your email" required>
 
     <label for="message">Message:</label>
-    <textarea [(ngModel)]="message" class="message" id="message" name="message" placeholder="Your message" rows="4" required></textarea>
+    <textarea formControlName="message" class="message" id="message" name="message" placeholder="Your message" rows="4" required></textarea>
 
-    <button (click)="sendForm()" type="submit">Submit</button>
+    <button [disabled]="!contactForm.valid" type="submit">Submit</button>
   </form>
 
+   <p>This Form comes from Contact Component</p>
 </section>
